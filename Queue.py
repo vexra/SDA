@@ -1,15 +1,11 @@
 class Queue:
-    def __init__(self, maxsize):
+    def __init__(self):
         self.data = []
-        self.maxsize = maxsize
 
     def __repr__(self):
         return str(self.data)
 
     def enqueue(self, element):
-        if len(self.data) == self.maxsize:
-            self.dequeue()
-            
         self.data.append(element)
 
     def dequeue(self):
@@ -24,7 +20,7 @@ class Queue:
 
 
 if __name__ == "__main__":
-    qq = Queue(5)
+    qq = Queue()
     print(qq)
     qq.enqueue(200)
     qq.enqueue(500)
